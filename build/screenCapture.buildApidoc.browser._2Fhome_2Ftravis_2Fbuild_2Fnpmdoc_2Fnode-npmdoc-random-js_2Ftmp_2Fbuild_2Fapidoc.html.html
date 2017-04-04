@@ -1,0 +1,1215 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://github.com/ckknight/random-js">random-js (v1.0.8)</a>
+</h1>
+<h4>A mathematically correct random number generator library for JavaScript.</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.random-js">module random-js</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.random-js.bool">
+            function <span class="apidocSignatureSpan">random-js.</span>bool
+            <span class="apidocSignatureSpan">(numerator, denominator)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.random-js.date">
+            function <span class="apidocSignatureSpan">random-js.</span>date
+            <span class="apidocSignatureSpan">(start, end)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.random-js.dice">
+            function <span class="apidocSignatureSpan">random-js.</span>dice
+            <span class="apidocSignatureSpan">(sideCount, dieCount)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.random-js.die">
+            function <span class="apidocSignatureSpan">random-js.</span>die
+            <span class="apidocSignatureSpan">(sideCount)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.random-js.generateEntropyArray">
+            function <span class="apidocSignatureSpan">random-js.</span>generateEntropyArray
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.random-js.hex">
+            function <span class="apidocSignatureSpan">random-js.</span>hex
+            <span class="apidocSignatureSpan">(upper)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.random-js.int32">
+            function <span class="apidocSignatureSpan">random-js.</span>int32
+            <span class="apidocSignatureSpan">(engine)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.random-js.int53">
+            function <span class="apidocSignatureSpan">random-js.</span>int53
+            <span class="apidocSignatureSpan">(engine)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.random-js.int53Full">
+            function <span class="apidocSignatureSpan">random-js.</span>int53Full
+            <span class="apidocSignatureSpan">(engine)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.random-js.integer">
+            function <span class="apidocSignatureSpan">random-js.</span>integer
+            <span class="apidocSignatureSpan">(min, max)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.random-js.pick">
+            function <span class="apidocSignatureSpan">random-js.</span>pick
+            <span class="apidocSignatureSpan">(engine, array, begin, end)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.random-js.picker">
+            function <span class="apidocSignatureSpan">random-js.</span>picker
+            <span class="apidocSignatureSpan">(array, begin, end)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.random-js.real">
+            function <span class="apidocSignatureSpan">random-js.</span>real
+            <span class="apidocSignatureSpan">(left, right, inclusive)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.random-js.realZeroToOneExclusive">
+            function <span class="apidocSignatureSpan">random-js.</span>realZeroToOneExclusive
+            <span class="apidocSignatureSpan">(engine)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.random-js.realZeroToOneInclusive">
+            function <span class="apidocSignatureSpan">random-js.</span>realZeroToOneInclusive
+            <span class="apidocSignatureSpan">(engine)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.random-js.sample">
+            function <span class="apidocSignatureSpan">random-js.</span>sample
+            <span class="apidocSignatureSpan">(engine, population, sampleSize)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.random-js.shuffle">
+            function <span class="apidocSignatureSpan">random-js.</span>shuffle
+            <span class="apidocSignatureSpan">(engine, array, downTo)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.random-js.string">
+            function <span class="apidocSignatureSpan">random-js.</span>string
+            <span class="apidocSignatureSpan">(pool)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.random-js.uint32">
+            function <span class="apidocSignatureSpan">random-js.</span>uint32
+            <span class="apidocSignatureSpan">(engine)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.random-js.uint53">
+            function <span class="apidocSignatureSpan">random-js.</span>uint53
+            <span class="apidocSignatureSpan">(engine)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.random-js.uint53Full">
+            function <span class="apidocSignatureSpan">random-js.</span>uint53Full
+            <span class="apidocSignatureSpan">(engine)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.random-js.uuid4">
+            function <span class="apidocSignatureSpan">random-js.</span>uuid4
+            <span class="apidocSignatureSpan">(engine)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">random-js.</span>engines</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.random-js.engines">module random-js.engines</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.random-js.engines.mt19937">
+            function <span class="apidocSignatureSpan">random-js.engines.</span>mt19937
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.random-js.engines.nativeMath">
+            function <span class="apidocSignatureSpan">random-js.engines.</span>nativeMath
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">random-js.engines.</span>browserCrypto</span>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.random-js" id="apidoc.module.random-js">module random-js</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.random-js.bool" id="apidoc.element.random-js.bool">
+        function <span class="apidocSignatureSpan">random-js.</span>bool
+        <span class="apidocSignatureSpan">(numerator, denominator)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">bool = function (numerator, denominator) {
+  if (denominator == null) {
+    if (numerator == null) {
+      return isLeastBitTrue;
+    }
+    return probability(numerator);
+  } else {
+    if (numerator &lt;= 0) {
+      return returnValue(false);
+    } else if (numerator &gt;= denominator) {
+      return returnValue(true);
+    }
+    return lessThan(Random.integer(0, denominator - 1), numerator);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+### Distributions
+
+Random.js also provides a set of methods for producing useful data from an engine.
+
+* `Random.integer(min, max)(engine)`: Produce an integer within the inclusive range [`min`, `max`]. `min` can be at its minimum -
+9007199254740992 (-2 ** 53). `max` can be at its maximum 9007199254740992 (2 ** 53).
+* `Random.real(min, max, inclusive)(engine)`: Produce a floating point number within the range [`min`, `max`) or [`min`, `max`].
+Uses 53 bits of randomness.
+* `Random.<span class="apidocCodeKeywordSpan">bool</span>()(engine)`: Produce a boolean with a 50% chance of it being `true`.
+* `Random.bool(percentage)(engine)`: Produce a boolean with the specified chance causing it to be `true`.
+* `Random.bool(numerator, denominator)(engine)`: Produce a boolean with `numerator`/`denominator` chance of it being true.
+* `Random.pick(engine, array[, begin[, end]])`: Return a random value within the provided `array` within the sliced bounds of `begin
+` and `end`.
+* `Random.picker(array[, begin[, end]])(engine)`: Same as `Random.pick(engine, array, begin, end)`.
+* `Random.shuffle(engine, array)`: Shuffle the provided `array` (in-place). Similar to `.sort()`.
+* `Random.sample(engine, population, sampleSize)`: From the `population` array, produce an array with `sampleSize` elements that
+ are randomly chosen without repeats.
+* `Random.die(sideCount)(engine)`: Same as `Random.integer(1, sideCount)(engine)`
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.random-js.date" id="apidoc.element.random-js.date">
+        function <span class="apidocSignatureSpan">random-js.</span>date
+        <span class="apidocSignatureSpan">(start, end)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">date = function (start, end) {
+  if (!(start instanceof Date)) {
+    throw new TypeError("Expected start to be a Date, got " + typeof start);
+  } else if (!(end instanceof Date)) {
+    throw new TypeError("Expected end to be a Date, got " + typeof end);
+  }
+  var distribution = Random.integer(start.getTime(), end.getTime());
+  return function (engine) {
+    return new Date(distribution(engine));
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * `Random.die(sideCount)(engine)`: Same as `Random.integer(1, sideCount)(engine)`
+ * `Random.dice(sideCount, dieCount)(engine)`: Produce an array of length `dieCount` with as many `die` rolls.
+ * `Random.uuid4(engine)`: Produce a [Universally Unique Identifier](http://en.wikipedia.org/wiki/Universally_unique_identifier)
+Version 4.
+ * `Random.string()(engine, length)`: Produce a random string using numbers, uppercase and lowercase letters, `_`, and `-` of length
+ `length`.
+ * `Random.string(pool)(engine, length)`: Produce a random string using the provided string `pool` as the possible characters to
+ choose from of length `length`.
+ * `Random.hex()(engine, length)` or `Random.hex(false)(engine, length)`: Produce a random string comprised of numbers or the characters
+ `abcdef` of length `length`.
+ * `Random.hex(true)(engine, length)`: Produce a random string comprised of numbers or the characters `ABCDEF` of length `length
+`.
+ * `Random.<span class="apidocCodeKeywordSpan">date</span>(start, end)(engine)`: Produce a random `Date` within the inclusive range
+ of [`start`, `end`]. `start` and `end` must both be `Date`s.
+
+An example of using `integer` would be as such:
+
+// create a Mersenne Twister-19937 that is auto-seeded based on time and other random values
+var engine = Random.engines.mt19937().autoSeed();
+// create a distribution that will consistently produce integers within inclusive range [0, 99].
+var distribution = Random.integer(0, 99);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.random-js.dice" id="apidoc.element.random-js.dice">
+        function <span class="apidocSignatureSpan">random-js.</span>dice
+        <span class="apidocSignatureSpan">(sideCount, dieCount)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">dice = function (sideCount, dieCount) {
+  var distribution = Random.die(sideCount);
+  return function (engine) {
+    var result = [];
+    result.length = dieCount;
+    for (var i = 0; i &lt; dieCount; ++i) {
+      result[i] = distribution(engine);
+    }
+    return result;
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* `Random.bool(percentage)(engine)`: Produce a boolean with the specified chance causing it to be `true`.
+* `Random.bool(numerator, denominator)(engine)`: Produce a boolean with `numerator`/`denominator` chance of it being true.
+* `Random.pick(engine, array[, begin[, end]])`: Return a random value within the provided `array` within the sliced bounds of `begin
+` and `end`.
+* `Random.picker(array[, begin[, end]])(engine)`: Same as `Random.pick(engine, array, begin, end)`.
+* `Random.shuffle(engine, array)`: Shuffle the provided `array` (in-place). Similar to `.sort()`.
+* `Random.sample(engine, population, sampleSize)`: From the `population` array, produce an array with `sampleSize` elements that
+ are randomly chosen without repeats.
+* `Random.die(sideCount)(engine)`: Same as `Random.integer(1, sideCount)(engine)`
+* `Random.<span class="apidocCodeKeywordSpan">dice</span>(sideCount, dieCount)(engine)`: Produce an array of length `dieCount` with
+ as many `die` rolls.
+* `Random.uuid4(engine)`: Produce a [Universally Unique Identifier](http://en.wikipedia.org/wiki/Universally_unique_identifier)
+Version 4.
+* `Random.string()(engine, length)`: Produce a random string using numbers, uppercase and lowercase letters, `_`, and `-` of length
+ `length`.
+* `Random.string(pool)(engine, length)`: Produce a random string using the provided string `pool` as the possible characters to
+choose from of length `length`.
+* `Random.hex()(engine, length)` or `Random.hex(false)(engine, length)`: Produce a random string comprised of numbers or the characters
+ `abcdef` of length `length`.
+* `Random.hex(true)(engine, length)`: Produce a random string comprised of numbers or the characters `ABCDEF` of length `length`.
+* `Random.date(start, end)(engine)`: Produce a random `Date` within the inclusive range of [`start`, `end`]. `start` and `end` must
+ both be `Date`s.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.random-js.die" id="apidoc.element.random-js.die">
+        function <span class="apidocSignatureSpan">random-js.</span>die
+        <span class="apidocSignatureSpan">(sideCount)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">die = function (sideCount) {
+  return Random.integer(1, sideCount);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* `Random.bool()(engine)`: Produce a boolean with a 50% chance of it being `true`.
+* `Random.bool(percentage)(engine)`: Produce a boolean with the specified chance causing it to be `true`.
+* `Random.bool(numerator, denominator)(engine)`: Produce a boolean with `numerator`/`denominator` chance of it being true.
+* `Random.pick(engine, array[, begin[, end]])`: Return a random value within the provided `array` within the sliced bounds of `begin
+` and `end`.
+* `Random.picker(array[, begin[, end]])(engine)`: Same as `Random.pick(engine, array, begin, end)`.
+* `Random.shuffle(engine, array)`: Shuffle the provided `array` (in-place). Similar to `.sort()`.
+* `Random.sample(engine, population, sampleSize)`: From the `population` array, produce an array with `sampleSize` elements that
+ are randomly chosen without repeats.
+* `Random.<span class="apidocCodeKeywordSpan">die</span>(sideCount)(engine)`: Same as `Random.integer(1, sideCount)(engine)`
+* `Random.dice(sideCount, dieCount)(engine)`: Produce an array of length `dieCount` with as many `die` rolls.
+* `Random.uuid4(engine)`: Produce a [Universally Unique Identifier](http://en.wikipedia.org/wiki/Universally_unique_identifier)
+Version 4.
+* `Random.string()(engine, length)`: Produce a random string using numbers, uppercase and lowercase letters, `_`, and `-` of length
+ `length`.
+* `Random.string(pool)(engine, length)`: Produce a random string using the provided string `pool` as the possible characters to
+choose from of length `length`.
+* `Random.hex()(engine, length)` or `Random.hex(false)(engine, length)`: Produce a random string comprised of numbers or the characters
+ `abcdef` of length `length`.
+* `Random.hex(true)(engine, length)`: Produce a random string comprised of numbers or the characters `ABCDEF` of length `length`.
+* `Random.date(start, end)(engine)`: Produce a random `Date` within the inclusive range of [`start`, `end`]. `start` and `end` must
+ both be `Date`s.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.random-js.generateEntropyArray" id="apidoc.element.random-js.generateEntropyArray">
+        function <span class="apidocSignatureSpan">random-js.</span>generateEntropyArray
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">generateEntropyArray = function () {
+  var array = [];
+  var engine = Random.engines.nativeMath;
+  for (var i = 0; i &lt; 16; ++i) {
+    array[i] = engine() | 0;
+  }
+  array.push(new Date().getTime() | 0);
+  return array;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.random-js.hex" id="apidoc.element.random-js.hex">
+        function <span class="apidocSignatureSpan">random-js.</span>hex
+        <span class="apidocSignatureSpan">(upper)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">hex = function (upper) {
+  if (upper) {
+    return upperHex;
+  } else {
+    return lowerHex;
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * `Random.shuffle(engine, array)`: Shuffle the provided `array` (in-place). Similar to `.sort()`.
+ * `Random.sample(engine, population, sampleSize)`: From the `population` array, produce an array with `sampleSize` elements that
+ are randomly chosen without repeats.
+ * `Random.die(sideCount)(engine)`: Same as `Random.integer(1, sideCount)(engine)`
+ * `Random.dice(sideCount, dieCount)(engine)`: Produce an array of length `dieCount` with as many `die` rolls.
+ * `Random.uuid4(engine)`: Produce a [Universally Unique Identifier](http://en.wikipedia.org/wiki/Universally_unique_identifier)
+Version 4.
+ * `Random.string()(engine, length)`: Produce a random string using numbers, uppercase and lowercase letters, `_`, and `-` of length
+ `length`.
+ * `Random.string(pool)(engine, length)`: Produce a random string using the provided string `pool` as the possible characters to
+ choose from of length `length`.
+ * `Random.<span class="apidocCodeKeywordSpan">hex</span>()(engine, length)` or `Random.hex(false)(engine, length)`: Produce a random
+ string comprised of numbers or the characters `abcdef` of length `length`.
+ * `Random.hex(true)(engine, length)`: Produce a random string comprised of numbers or the characters `ABCDEF` of length `length
+`.
+ * `Random.date(start, end)(engine)`: Produce a random `Date` within the inclusive range of [`start`, `end`]. `start` and `end`
+must both be `Date`s.
+
+An example of using `integer` would be as such:
+
+// create a Mersenne Twister-19937 that is auto-seeded based on time and other random values
+var engine = Random.engines.mt19937().autoSeed();
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.random-js.int32" id="apidoc.element.random-js.int32">
+        function <span class="apidocSignatureSpan">random-js.</span>int32
+        <span class="apidocSignatureSpan">(engine)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">int32 = function (engine) {
+  return engine() | 0;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.random-js.int53" id="apidoc.element.random-js.int53">
+        function <span class="apidocSignatureSpan">random-js.</span>int53
+        <span class="apidocSignatureSpan">(engine)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">int53 = function (engine) {
+  var high = engine() | 0;
+  var low = engine() &gt;&gt;&gt; 0;
+  return ((high &amp; 0x1fffff) * 0x100000000) + low + (high &amp; 0x200000 ? -0x20000000000000 : 0);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.random-js.int53Full" id="apidoc.element.random-js.int53Full">
+        function <span class="apidocSignatureSpan">random-js.</span>int53Full
+        <span class="apidocSignatureSpan">(engine)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">int53Full = function (engine) {
+  while (true) {
+    var high = engine() | 0;
+    if (high &amp; 0x400000) {
+      if ((high &amp; 0x7fffff) === 0x400000 &amp;&amp; (engine() | 0) === 0) {
+        return 0x20000000000000;
+      }
+    } else {
+      var low = engine() &gt;&gt;&gt; 0;
+      return ((high &amp; 0x1fffff) * 0x100000000) + low + (high &amp; 0x200000 ? -0x20000000000000 : 0);
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.random-js.integer" id="apidoc.element.random-js.integer">
+        function <span class="apidocSignatureSpan">random-js.</span>integer
+        <span class="apidocSignatureSpan">(min, max)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">integer = function (min, max) {
+  min = Math.floor(min);
+  max = Math.floor(max);
+  if (min &lt; -0x20000000000000 || !isFinite(min)) {
+    throw new RangeError("Expected min to be at least " + (-0x20000000000000));
+  } else if (max &gt; 0x20000000000000 || !isFinite(max)) {
+    throw new RangeError("Expected max to be at most " + 0x20000000000000);
+  }
+
+  var range = max - min;
+  if (range &lt;= 0 || !isFinite(range)) {
+    return returnValue(min);
+  } else if (range === 0xffffffff) {
+    if (min === 0) {
+      return Random.uint32;
+    } else {
+      return add(Random.int32, min + 0x80000000);
+    }
+  } else if (range &lt; 0xffffffff) {
+    return add(downscaleToRange(range), min);
+  } else if (range === 0x1fffffffffffff) {
+    return add(Random.uint53, min);
+  } else if (range &lt; 0x1fffffffffffff) {
+    return add(upscaleWithinU53(range), min);
+  } else if (max - 1 - min === 0x1fffffffffffff) {
+    return add(Random.uint53Full, min);
+  } else if (min === -0x20000000000000 &amp;&amp; max === 0x20000000000000) {
+    return Random.int53Full;
+  } else if (min === -0x20000000000000 &amp;&amp; max === 0x1fffffffffffff) {
+    return Random.int53;
+  } else if (min === -0x1fffffffffffff &amp;&amp; max === 0x20000000000000) {
+    return add(Random.int53, 1);
+  } else if (max === 0x20000000000000) {
+    return add(upscaleWithinI53AndLoopCheck(min - 1, max - 1), 1);
+  } else {
+    return upscaleWithinI53AndLoopCheck(min, max);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+One can seed a Mersenne Twister with the same value (`mt.seed(value)`) or values (`mt.seedWithArray(array)`) and discard the number
+ of uses (`mt.getUseCount()`) to achieve the exact same state.
+
+### Distributions
+
+Random.js also provides a set of methods for producing useful data from an engine.
+
+* `Random.<span class="apidocCodeKeywordSpan">integer</span>(min, max)(engine)`: Produce an integer within the inclusive range [`
+min`, `max`]. `min` can be at its minimum -9007199254740992 (-2 ** 53). `max` can be at its maximum 9007199254740992 (2 ** 53).
+* `Random.real(min, max, inclusive)(engine)`: Produce a floating point number within the range [`min`, `max`) or [`min`, `max`].
+Uses 53 bits of randomness.
+* `Random.bool()(engine)`: Produce a boolean with a 50% chance of it being `true`.
+* `Random.bool(percentage)(engine)`: Produce a boolean with the specified chance causing it to be `true`.
+* `Random.bool(numerator, denominator)(engine)`: Produce a boolean with `numerator`/`denominator` chance of it being true.
+* `Random.pick(engine, array[, begin[, end]])`: Return a random value within the provided `array` within the sliced bounds of `begin
+` and `end`.
+* `Random.picker(array[, begin[, end]])(engine)`: Same as `Random.pick(engine, array, begin, end)`.
+* `Random.shuffle(engine, array)`: Shuffle the provided `array` (in-place). Similar to `.sort()`.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.random-js.pick" id="apidoc.element.random-js.pick">
+        function <span class="apidocSignatureSpan">random-js.</span>pick
+        <span class="apidocSignatureSpan">(engine, array, begin, end)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">pick = function (engine, array, begin, end) {
+  var length = array.length;
+  var start = begin == null ? 0 : convertSliceArgument(toInteger(begin), length);
+  var finish = end === void 0 ? length : convertSliceArgument(toInteger(end), length);
+  if (start &gt;= finish) {
+    return void 0;
+  }
+  var distribution = Random.integer(start, finish - 1);
+  return array[distribution(engine)];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+Random.js also provides a set of methods for producing useful data from an engine.
+
+* `Random.integer(min, max)(engine)`: Produce an integer within the inclusive range [`min`, `max`]. `min` can be at its minimum -
+9007199254740992 (-2 ** 53). `max` can be at its maximum 9007199254740992 (2 ** 53).
+* `Random.real(min, max, inclusive)(engine)`: Produce a floating point number within the range [`min`, `max`) or [`min`, `max`].
+Uses 53 bits of randomness.
+* `Random.bool()(engine)`: Produce a boolean with a 50% chance of it being `true`.
+* `Random.bool(percentage)(engine)`: Produce a boolean with the specified chance causing it to be `true`.
+* `Random.bool(numerator, denominator)(engine)`: Produce a boolean with `numerator`/`denominator` chance of it being true.
+* `Random.<span class="apidocCodeKeywordSpan">pick</span>(engine, array[, begin[, end]])`: Return a random value within the provided
+ `array` within the sliced bounds of `begin` and `end`.
+* `Random.picker(array[, begin[, end]])(engine)`: Same as `Random.pick(engine, array, begin, end)`.
+* `Random.shuffle(engine, array)`: Shuffle the provided `array` (in-place). Similar to `.sort()`.
+* `Random.sample(engine, population, sampleSize)`: From the `population` array, produce an array with `sampleSize` elements that
+ are randomly chosen without repeats.
+* `Random.die(sideCount)(engine)`: Same as `Random.integer(1, sideCount)(engine)`
+* `Random.dice(sideCount, dieCount)(engine)`: Produce an array of length `dieCount` with as many `die` rolls.
+* `Random.uuid4(engine)`: Produce a [Universally Unique Identifier](http://en.wikipedia.org/wiki/Universally_unique_identifier)
+Version 4.
+* `Random.string()(engine, length)`: Produce a random string using numbers, uppercase and lowercase letters, `_`, and `-` of length
+ `length`.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.random-js.picker" id="apidoc.element.random-js.picker">
+        function <span class="apidocSignatureSpan">random-js.</span>picker
+        <span class="apidocSignatureSpan">(array, begin, end)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">picker = function (array, begin, end) {
+  var clone = slice.call(array, begin, end);
+  if (!clone.length) {
+    return returnUndefined;
+  }
+  var distribution = Random.integer(0, clone.length - 1);
+  return function (engine) {
+    return clone[distribution(engine)];
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+* `Random.integer(min, max)(engine)`: Produce an integer within the inclusive range [`min`, `max`]. `min` can be at its minimum -
+9007199254740992 (-2 ** 53). `max` can be at its maximum 9007199254740992 (2 ** 53).
+* `Random.real(min, max, inclusive)(engine)`: Produce a floating point number within the range [`min`, `max`) or [`min`, `max`].
+Uses 53 bits of randomness.
+* `Random.bool()(engine)`: Produce a boolean with a 50% chance of it being `true`.
+* `Random.bool(percentage)(engine)`: Produce a boolean with the specified chance causing it to be `true`.
+* `Random.bool(numerator, denominator)(engine)`: Produce a boolean with `numerator`/`denominator` chance of it being true.
+* `Random.pick(engine, array[, begin[, end]])`: Return a random value within the provided `array` within the sliced bounds of `begin
+` and `end`.
+* `Random.<span class="apidocCodeKeywordSpan">picker</span>(array[, begin[, end]])(engine)`: Same as `Random.pick(engine, array,
+begin, end)`.
+* `Random.shuffle(engine, array)`: Shuffle the provided `array` (in-place). Similar to `.sort()`.
+* `Random.sample(engine, population, sampleSize)`: From the `population` array, produce an array with `sampleSize` elements that
+ are randomly chosen without repeats.
+* `Random.die(sideCount)(engine)`: Same as `Random.integer(1, sideCount)(engine)`
+* `Random.dice(sideCount, dieCount)(engine)`: Produce an array of length `dieCount` with as many `die` rolls.
+* `Random.uuid4(engine)`: Produce a [Universally Unique Identifier](http://en.wikipedia.org/wiki/Universally_unique_identifier)
+Version 4.
+* `Random.string()(engine, length)`: Produce a random string using numbers, uppercase and lowercase letters, `_`, and `-` of length
+ `length`.
+* `Random.string(pool)(engine, length)`: Produce a random string using the provided string `pool` as the possible characters to
+choose from of length `length`.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.random-js.real" id="apidoc.element.random-js.real">
+        function <span class="apidocSignatureSpan">random-js.</span>real
+        <span class="apidocSignatureSpan">(left, right, inclusive)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">real = function (left, right, inclusive) {
+  if (!isFinite(left)) {
+    throw new RangeError("Expected left to be a finite number");
+  } else if (!isFinite(right)) {
+    throw new RangeError("Expected right to be a finite number");
+  }
+  return add(
+    multiply(
+      inclusive ? Random.realZeroToOneInclusive : Random.realZeroToOneExclusive,
+      right - left),
+    left);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+One can seed a Mersenne Twister with the same value (`mt.seed(value)`) or values (`mt.seedWithArray(array)`) and discard the number
+ of uses (`mt.getUseCount()`) to achieve the exact same state.
+
+### Distributions
+
+Random.js also provides a set of methods for producing useful data from an engine.
+
+* `Random.integer(min, max)(engine)`: Produce an integer within the inclusive range [`min`, `max`]. `min` can be at its minimum -
+9007199254740992 (-2 ** 53). `max` can be at its maximum 9007199254740992 (2 ** 53).
+* `Random.<span class="apidocCodeKeywordSpan">real</span>(min, max, inclusive)(engine)`: Produce a floating point number within
+the range [`min`, `max`) or [`min`, `max`]. Uses 53 bits of randomness.
+* `Random.bool()(engine)`: Produce a boolean with a 50% chance of it being `true`.
+* `Random.bool(percentage)(engine)`: Produce a boolean with the specified chance causing it to be `true`.
+* `Random.bool(numerator, denominator)(engine)`: Produce a boolean with `numerator`/`denominator` chance of it being true.
+* `Random.pick(engine, array[, begin[, end]])`: Return a random value within the provided `array` within the sliced bounds of `begin
+` and `end`.
+* `Random.picker(array[, begin[, end]])(engine)`: Same as `Random.pick(engine, array, begin, end)`.
+* `Random.shuffle(engine, array)`: Shuffle the provided `array` (in-place). Similar to `.sort()`.
+* `Random.sample(engine, population, sampleSize)`: From the `population` array, produce an array with `sampleSize` elements that
+ are randomly chosen without repeats.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.random-js.realZeroToOneExclusive" id="apidoc.element.random-js.realZeroToOneExclusive">
+        function <span class="apidocSignatureSpan">random-js.</span>realZeroToOneExclusive
+        <span class="apidocSignatureSpan">(engine)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">realZeroToOneExclusive = function (engine) {
+  return Random.uint53(engine) / 0x20000000000000;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.random-js.realZeroToOneInclusive" id="apidoc.element.random-js.realZeroToOneInclusive">
+        function <span class="apidocSignatureSpan">random-js.</span>realZeroToOneInclusive
+        <span class="apidocSignatureSpan">(engine)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">realZeroToOneInclusive = function (engine) {
+  return Random.uint53Full(engine) / 0x20000000000000;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.random-js.sample" id="apidoc.element.random-js.sample">
+        function <span class="apidocSignatureSpan">random-js.</span>sample
+        <span class="apidocSignatureSpan">(engine, population, sampleSize)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">sample = function (engine, population, sampleSize) {
+  if (sampleSize &lt; 0 || sampleSize &gt; population.length || !isFinite(sampleSize)) {
+    throw new RangeError("Expected sampleSize to be within 0 and the length of the population");
+  }
+
+  if (sampleSize === 0) {
+    return [];
+  }
+
+  var clone = slice.call(population);
+  var length = clone.length;
+  if (length === sampleSize) {
+    return Random.shuffle(engine, clone, 0);
+  }
+  var tailLength = length - sampleSize;
+  return Random.shuffle(engine, clone, tailLength - 1).slice(tailLength);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* `Random.real(min, max, inclusive)(engine)`: Produce a floating point number within the range [`min`, `max`) or [`min`, `max`].
+Uses 53 bits of randomness.
+* `Random.bool()(engine)`: Produce a boolean with a 50% chance of it being `true`.
+* `Random.bool(percentage)(engine)`: Produce a boolean with the specified chance causing it to be `true`.
+* `Random.bool(numerator, denominator)(engine)`: Produce a boolean with `numerator`/`denominator` chance of it being true.
+* `Random.pick(engine, array[, begin[, end]])`: Return a random value within the provided `array` within the sliced bounds of `begin
+` and `end`.
+* `Random.picker(array[, begin[, end]])(engine)`: Same as `Random.pick(engine, array, begin, end)`.
+* `Random.shuffle(engine, array)`: Shuffle the provided `array` (in-place). Similar to `.sort()`.
+* `Random.<span class="apidocCodeKeywordSpan">sample</span>(engine, population, sampleSize)`: From the `population` array, produce
+ an array with `sampleSize` elements that are randomly chosen without repeats.
+* `Random.die(sideCount)(engine)`: Same as `Random.integer(1, sideCount)(engine)`
+* `Random.dice(sideCount, dieCount)(engine)`: Produce an array of length `dieCount` with as many `die` rolls.
+* `Random.uuid4(engine)`: Produce a [Universally Unique Identifier](http://en.wikipedia.org/wiki/Universally_unique_identifier)
+Version 4.
+* `Random.string()(engine, length)`: Produce a random string using numbers, uppercase and lowercase letters, `_`, and `-` of length
+ `length`.
+* `Random.string(pool)(engine, length)`: Produce a random string using the provided string `pool` as the possible characters to
+choose from of length `length`.
+* `Random.hex()(engine, length)` or `Random.hex(false)(engine, length)`: Produce a random string comprised of numbers or the characters
+ `abcdef` of length `length`.
+* `Random.hex(true)(engine, length)`: Produce a random string comprised of numbers or the characters `ABCDEF` of length `length`.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.random-js.shuffle" id="apidoc.element.random-js.shuffle">
+        function <span class="apidocSignatureSpan">random-js.</span>shuffle
+        <span class="apidocSignatureSpan">(engine, array, downTo)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">shuffle = function (engine, array, downTo) {
+  var length = array.length;
+  if (length) {
+    if (downTo == null) {
+      downTo = 0;
+    }
+    for (var i = (length - 1) &gt;&gt;&gt; 0; i &gt; downTo; --i) {
+      var distribution = Random.integer(0, i);
+      var j = distribution(engine);
+      if (i !== j) {
+        var tmp = array[i];
+        array[i] = array[j];
+        array[j] = tmp;
+      }
+    }
+  }
+  return array;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* `Random.integer(min, max)(engine)`: Produce an integer within the inclusive range [`min`, `max`]. `min` can be at its minimum -
+9007199254740992 (-2 ** 53). `max` can be at its maximum 9007199254740992 (2 ** 53).
+* `Random.real(min, max, inclusive)(engine)`: Produce a floating point number within the range [`min`, `max`) or [`min`, `max`].
+Uses 53 bits of randomness.
+* `Random.bool()(engine)`: Produce a boolean with a 50% chance of it being `true`.
+* `Random.bool(percentage)(engine)`: Produce a boolean with the specified chance causing it to be `true`.
+* `Random.bool(numerator, denominator)(engine)`: Produce a boolean with `numerator`/`denominator` chance of it being true.
+* `Random.pick(engine, array[, begin[, end]])`: Return a random value within the provided `array` within the sliced bounds of `begin
+` and `end`.
+* `Random.picker(array[, begin[, end]])(engine)`: Same as `Random.pick(engine, array, begin, end)`.
+* `Random.<span class="apidocCodeKeywordSpan">shuffle</span>(engine, array)`: Shuffle the provided `array` (in-place). Similar to
+ `.sort()`.
+* `Random.sample(engine, population, sampleSize)`: From the `population` array, produce an array with `sampleSize` elements that
+ are randomly chosen without repeats.
+* `Random.die(sideCount)(engine)`: Same as `Random.integer(1, sideCount)(engine)`
+* `Random.dice(sideCount, dieCount)(engine)`: Produce an array of length `dieCount` with as many `die` rolls.
+* `Random.uuid4(engine)`: Produce a [Universally Unique Identifier](http://en.wikipedia.org/wiki/Universally_unique_identifier)
+Version 4.
+* `Random.string()(engine, length)`: Produce a random string using numbers, uppercase and lowercase letters, `_`, and `-` of length
+ `length`.
+* `Random.string(pool)(engine, length)`: Produce a random string using the provided string `pool` as the possible characters to
+choose from of length `length`.
+* `Random.hex()(engine, length)` or `Random.hex(false)(engine, length)`: Produce a random string comprised of numbers or the characters
+ `abcdef` of length `length`.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.random-js.string" id="apidoc.element.random-js.string">
+        function <span class="apidocSignatureSpan">random-js.</span>string
+        <span class="apidocSignatureSpan">(pool)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">string = function (pool) {
+  if (pool == null) {
+    pool = DEFAULT_STRING_POOL;
+  }
+
+  var length = pool.length;
+  if (!length) {
+    throw new Error("Expected pool not to be an empty string");
+  }
+
+  var distribution = Random.integer(0, length - 1);
+  return function (engine, length) {
+    var result = "";
+    for (var i = 0; i &lt; length; ++i) {
+      var j = distribution(engine);
+      result += pool.charAt(j);
+    }
+    return result;
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * `Random.pick(engine, array[, begin[, end]])`: Return a random value within the provided `array` within the sliced bounds of `
+begin` and `end`.
+ * `Random.picker(array[, begin[, end]])(engine)`: Same as `Random.pick(engine, array, begin, end)`.
+ * `Random.shuffle(engine, array)`: Shuffle the provided `array` (in-place). Similar to `.sort()`.
+ * `Random.sample(engine, population, sampleSize)`: From the `population` array, produce an array with `sampleSize` elements that
+ are randomly chosen without repeats.
+ * `Random.die(sideCount)(engine)`: Same as `Random.integer(1, sideCount)(engine)`
+ * `Random.dice(sideCount, dieCount)(engine)`: Produce an array of length `dieCount` with as many `die` rolls.
+ * `Random.uuid4(engine)`: Produce a [Universally Unique Identifier](http://en.wikipedia.org/wiki/Universally_unique_identifier)
+Version 4.
+ * `Random.<span class="apidocCodeKeywordSpan">string</span>()(engine, length)`: Produce a random string using numbers, uppercase
+ and lowercase letters, `_`, and `-` of length `length`.
+ * `Random.string(pool)(engine, length)`: Produce a random string using the provided string `pool` as the possible characters to
+ choose from of length `length`.
+ * `Random.hex()(engine, length)` or `Random.hex(false)(engine, length)`: Produce a random string comprised of numbers or the characters
+ `abcdef` of length `length`.
+ * `Random.hex(true)(engine, length)`: Produce a random string comprised of numbers or the characters `ABCDEF` of length `length
+`.
+ * `Random.date(start, end)(engine)`: Produce a random `Date` within the inclusive range of [`start`, `end`]. `start` and `end`
+must both be `Date`s.
+
+An example of using `integer` would be as such:
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.random-js.uint32" id="apidoc.element.random-js.uint32">
+        function <span class="apidocSignatureSpan">random-js.</span>uint32
+        <span class="apidocSignatureSpan">(engine)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">uint32 = function (engine) {
+  return engine() &gt;&gt;&gt; 0;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.random-js.uint53" id="apidoc.element.random-js.uint53">
+        function <span class="apidocSignatureSpan">random-js.</span>uint53
+        <span class="apidocSignatureSpan">(engine)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">uint53 = function (engine) {
+  var high = engine() &amp; 0x1fffff;
+  var low = engine() &gt;&gt;&gt; 0;
+  return (high * 0x100000000) + low;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.random-js.uint53Full" id="apidoc.element.random-js.uint53Full">
+        function <span class="apidocSignatureSpan">random-js.</span>uint53Full
+        <span class="apidocSignatureSpan">(engine)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">uint53Full = function (engine) {
+  while (true) {
+    var high = engine() | 0;
+    if (high &amp; 0x200000) {
+      if ((high &amp; 0x3fffff) === 0x200000 &amp;&amp; (engine() | 0) === 0) {
+        return 0x20000000000000;
+      }
+    } else {
+      var low = engine() &gt;&gt;&gt; 0;
+      return ((high &amp; 0x1fffff) * 0x100000000) + low;
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.random-js.uuid4" id="apidoc.element.random-js.uuid4">
+        function <span class="apidocSignatureSpan">random-js.</span>uuid4
+        <span class="apidocSignatureSpan">(engine)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">uuid4 = function (engine) {
+  var a = engine() &gt;&gt;&gt; 0;
+  var b = engine() | 0;
+  var c = engine() | 0;
+  var d = engine() &gt;&gt;&gt; 0;
+
+  return (
+    zeroPad(a.toString(16), 8) +
+    "-" +
+    zeroPad((b &amp; 0xffff).toString(16), 4) +
+    "-" +
+    zeroPad((((b &gt;&gt; 4) &amp; 0x0fff) | 0x4000).toString(16), 4) +
+    "-" +
+    zeroPad(((c &amp; 0x3fff) | 0x8000).toString(16), 4) +
+    "-" +
+    zeroPad(((c &gt;&gt; 4) &amp; 0xffff).toString(16), 4) +
+    zeroPad(d.toString(16), 8));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * `Random.bool(numerator, denominator)(engine)`: Produce a boolean with `numerator`/`denominator` chance of it being true.
+ * `Random.pick(engine, array[, begin[, end]])`: Return a random value within the provided `array` within the sliced bounds of `
+begin` and `end`.
+ * `Random.picker(array[, begin[, end]])(engine)`: Same as `Random.pick(engine, array, begin, end)`.
+ * `Random.shuffle(engine, array)`: Shuffle the provided `array` (in-place). Similar to `.sort()`.
+ * `Random.sample(engine, population, sampleSize)`: From the `population` array, produce an array with `sampleSize` elements that
+ are randomly chosen without repeats.
+ * `Random.die(sideCount)(engine)`: Same as `Random.integer(1, sideCount)(engine)`
+ * `Random.dice(sideCount, dieCount)(engine)`: Produce an array of length `dieCount` with as many `die` rolls.
+ * `Random.<span class="apidocCodeKeywordSpan">uuid4</span>(engine)`: Produce a [Universally Unique Identifier](http://en.wikipedia
+.org/wiki/Universally_unique_identifier) Version 4.
+ * `Random.string()(engine, length)`: Produce a random string using numbers, uppercase and lowercase letters, `_`, and `-` of length
+ `length`.
+ * `Random.string(pool)(engine, length)`: Produce a random string using the provided string `pool` as the possible characters to
+ choose from of length `length`.
+ * `Random.hex()(engine, length)` or `Random.hex(false)(engine, length)`: Produce a random string comprised of numbers or the characters
+ `abcdef` of length `length`.
+ * `Random.hex(true)(engine, length)`: Produce a random string comprised of numbers or the characters `ABCDEF` of length `length
+`.
+ * `Random.date(start, end)(engine)`: Produce a random `Date` within the inclusive range of [`start`, `end`]. `start` and `end`
+must both be `Date`s.
+
+An example of using `integer` would be as such:
+...</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.random-js.engines" id="apidoc.module.random-js.engines">module random-js.engines</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.random-js.engines.mt19937" id="apidoc.element.random-js.engines.mt19937">
+        function <span class="apidocSignatureSpan">random-js.engines.</span>mt19937
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function mt19937() {
+  var data = new Int32Array(624);
+  var index = 0;
+  var uses = 0;
+
+  function next() {
+    if ((index | 0) &gt;= 624) {
+      refreshData(data);
+      index = 0;
+    }
+
+    var value = data[index];
+    index = (index + 1) | 0;
+    uses += 1;
+    return temper(value) | 0;
+  }
+  next.getUseCount = function() {
+    return uses;
+  };
+  next.discard = function (count) {
+    uses += count;
+    if ((index | 0) &gt;= 624) {
+      refreshData(data);
+      index = 0;
+    }
+    while ((count - index) &gt; 624) {
+      count -= 624 - index;
+      refreshData(data);
+      index = 0;
+    }
+    index = (index + count) | 0;
+    return next;
+  };
+  next.seed = function (initial) {
+    var previous = 0;
+    data[0] = previous = initial | 0;
+
+    for (var i = 1; i &lt; 624; i = (i + 1) | 0) {
+      data[i] = previous = (imul((previous ^ (previous &gt;&gt;&gt; 30)), 0x6c078965) + i) | 0;
+    }
+    index = 624;
+    uses = 0;
+    return next;
+  };
+  next.seedWithArray = function (source) {
+    next.seed(0x012bd6aa);
+    seedWithArray(data, source);
+    return next;
+  };
+  next.autoSeed = function () {
+    return next.seedWithArray(Random.generateEntropyArray());
+  };
+  return next;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+## API
+
+### Engines
+
+* `Random.engines.nativeMath`: Utilizes `Math.random()`
+* `Random.engines.browserCrypto`: Utilizes `crypto.getRandomValues()`
+* `Random.engines.<span class="apidocCodeKeywordSpan">mt19937</span>()`: Produces a new Mersenne Twister. Must be seeded before
+use.
+
+### Mersenne Twister API
+
+Assuming one has done `var mt = Random.engines.mt19937()`:
+
+* `mt()`: Produce a 32-bit signed integer.
+* `mt.seed(value)`: Seed the twister with an initial 32-bit integer.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.random-js.engines.nativeMath" id="apidoc.element.random-js.engines.nativeMath">
+        function <span class="apidocSignatureSpan">random-js.engines.</span>nativeMath
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">nativeMath = function () {
+  return (Math.random() * 0x100000000) | 0;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
