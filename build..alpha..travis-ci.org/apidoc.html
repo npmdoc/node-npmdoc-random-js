@@ -63,6 +63,15 @@
 
         <li>
 
+            <a class="apidocElementLiA" href="#apidoc.element.random-js.random-js">
+            function <span class="apidocSignatureSpan"></span>random-js
+            <span class="apidocSignatureSpan">(engine)</span>
+            </a>
+
+        </li>
+
+        <li>
+
             <a class="apidocElementLiA" href="#apidoc.element.random-js.bool">
             function <span class="apidocSignatureSpan">random-js.</span>bool
             <span class="apidocSignatureSpan">(numerator, denominator)</span>
@@ -302,6 +311,30 @@
 
 
     <h2>
+        <a href="#apidoc.element.random-js.random-js" id="apidoc.element.random-js.random-js">
+        function <span class="apidocSignatureSpan"></span>random-js
+        <span class="apidocSignatureSpan">(engine)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Random(engine) {
+  if (!(this instanceof Random)) {
+    return new Random(engine);
+  }
+
+  if (engine == null) {
+    engine = Random.engines.nativeMath;
+  } else if (typeof engine !== &#x22;function&#x22;) {
+    throw new TypeError(&#x22;Expected engine to be a function, got &#x22; + typeof engine);
+  }
+  this.engine = engine;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
         <a href="#apidoc.element.random-js.bool" id="apidoc.element.random-js.bool">
         function <span class="apidocSignatureSpan">random-js.</span>bool
         <span class="apidocSignatureSpan">(numerator, denominator)</span>
@@ -493,7 +526,23 @@ choose from of length `length`.
   array.push(new Date().getTime() | 0);
   return array;
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    expect(random.engine).toBe(Random.engines.nativeMath);
+  });
+});
+    });
+
+    describe(&#x22;generateEntropyArray&#x22;, function () {
+it(&#x22;returns a non-empty array of int32s&#x22;, function () {
+  var actual = Random.<span class="apidocCodeKeywordSpan">generateEntropyArray</span>();
+
+  expect(actual instanceof Array).toBe(true);
+  expect(actual.length).not.toBe(false);
+  for (var i = 0; i &#x3c; actual.length; ++i) {
+    expect(actual[i]).toBe(actual[i] | 0);
+  }
+});
+...</pre></li>
     </ul>
 
 
@@ -812,7 +861,22 @@ the range [`min`, `max`) or [`min`, `max`]. Uses 53 bits of randomness.
     <li>description and source-code<pre class="apidocCodePre">realZeroToOneExclusive = function (engine) {
   return Random.uint53(engine) / 0x20000000000000;
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+describe(&#x22;realZeroToOneExclusive&#x22;, function () {
+  it(&#x22;calls uint53 and divides by the maximum&#x22;, function () {
+    var dummy = 0x1234567890abcd;
+    spyOn(Random, &#x22;uint53&#x22;).andReturn(dummy);
+    var expected = dummy / 0x20000000000000;
+
+    var actual = Random.<span class="apidocCodeKeywordSpan">realZeroToOneExclusive</span>(function () {
+      return 0;
+    });
+
+    expect(actual).toBe(expected);
+  });
+});
+...</pre></li>
     </ul>
 
 
@@ -827,7 +891,22 @@ the range [`min`, `max`) or [`min`, `max`]. Uses 53 bits of randomness.
     <li>description and source-code<pre class="apidocCodePre">realZeroToOneInclusive = function (engine) {
   return Random.uint53Full(engine) / 0x20000000000000;
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  describe(&#x22;real distribution&#x22;, function () {
+describe(&#x22;realZeroToOneInclusive&#x22;, function () {
+  it(&#x22;calls uint53Full and divides by the maximum&#x22;, function () {
+    var dummy = 0x1234567890abcd;
+    spyOn(Random, &#x22;uint53Full&#x22;).andReturn(dummy);
+    var expected = dummy / 0x20000000000000;
+
+    var actual = Random.<span class="apidocCodeKeywordSpan">realZeroToOneInclusive</span>(function () {
+      return 0;
+    });
+
+    expect(actual).toBe(expected);
+  });
+});
+...</pre></li>
     </ul>
 
 
